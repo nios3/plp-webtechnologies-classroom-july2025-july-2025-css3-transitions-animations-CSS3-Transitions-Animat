@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations & JavaScript Functions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Bringing Web Pages to Life</h1>
+            <p>Week 7: CSS Animations & JavaScript Functions</p>
+        </header>
+
+        <!-- Part 1: CSS3 Transitions and Animations -->
+        <section id="part1">
+            <h2>🎨✨ Part 1: CSS3 Transitions & Animations</h2>
+            
+            <div class="animation-demo">
+                <!-- Transition Examples -->
+                <div class="demo-section">
+                    <h3>CSS Transitions</h3>
+                    <div class="transition-examples">
+                        <div class="transition-box color-transition">Color Transition</div>
+                        <div class="transition-box scale-transition">Scale Transition</div>
+                        <div class="transition-box rotate-transition">Rotate Transition</div>
+                        <div class="transition-box shadow-transition">Shadow Transition</div>
+                    </div>
+                </div>
+
+                <!-- Keyframe Animations -->
+                <div class="demo-section">
+                    <h3>CSS Keyframe Animations</h3>
+                    <div class="keyframe-examples">
+                        <div class="animated-box bounce-animation">Bounce</div>
+                        <div class="animated-box slide-animation">Slide</div>
+                        <div class="animated-box pulse-animation">Pulse</div>
+                        <div class="animated-box spin-animation">Spin</div>
+                    </div>
+                </div>
+
+                <!-- Continuous Animations -->
+                <div class="demo-section">
+                    <h3>Continuous Animations</h3>
+                    <div class="continuous-animations">
+                        <div class="floating-element">Floating</div>
+                        <div class="breathing-element">Breathing</div>
+                        <div class="color-cycle-element">Color Cycle</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2: JavaScript Functions -->
+        <section id="part2">
+            <h2>📚✨ Part 2: JavaScript Functions</h2>
+            
+            <div class="functions-demo">
+                <!-- Scope Demonstration -->
+                <div class="demo-card">
+                    <h3>Function Scope</h3>
+                    <button id="scopeDemo">Test Scope</button>
+                    <div id="scopeOutput" class="output"></div>
+                </div>
+
+                <!-- Parameters & Return Values -->
+                <div class="demo-card">
+                    <h3>Parameters & Return Values</h3>
+                    <div class="input-group">
+                        <input type="number" id="num1" placeholder="Number 1" value="10">
+                        <input type="number" id="num2" placeholder="Number 2" value="5">
+                    </div>
+                    <div class="button-group">
+                        <button onclick="calculate('add')">Add</button>
+                        <button onclick="calculate('multiply')">Multiply</button>
+                        <button onclick="calculate('power')">Power</button>
+                    </div>
+                    <div id="mathOutput" class="output"></div>
+                </div>
+
+                <!-- String Manipulation -->
+                <div class="demo-card">
+                    <h3>String Functions</h3>
+                    <input type="text" id="textInput" placeholder="Enter text" value="Hello World">
+                    <div class="button-group">
+                        <button onclick="transformText('reverse')">Reverse</button>
+                        <button onclick="transformText('uppercase')">Uppercase</button>
+                        <button onclick="transformText('words')">Count Words</button>
+                    </div>
+                    <div id="textOutput" class="output"></div>
+                </div>
+
+                <!-- Array Functions -->
+                <div class="demo-card">
+                    <h3>Array Functions</h3>
+                    <input type="text" id="arrayInput" placeholder="Numbers (comma separated)" value="1,2,3,4,5">
+                    <div class="button-group">
+                        <button onclick="processArray('sum')">Sum</button>
+                        <button onclick="processArray('average')">Average</button>
+                        <button onclick="processArray('max')">Max</button>
+                    </div>
+                    <div id="arrayOutput" class="output"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Combined CSS & JavaScript -->
+        <section id="part3">
+            <h2>🎨🎬 Part 3: CSS + JavaScript Integration</h2>
+            
+            <div class="integration-demo">
+                <!-- Animation Controller -->
+                <div class="demo-card">
+                    <h3>Animation Controller</h3>
+                    <div class="animation-box" id="controlledBox">
+                        Controlled Box
+                    </div>
+                    <div class="button-group">
+                        <button onclick="startAnimation()">Start Animation</button>
+                        <button onclick="stopAnimation()">Stop Animation</button>
+                        <button onclick="resetAnimation()">Reset Animation</button>
+                    </div>
+                    <div class="animation-controls">
+                        <label>Speed: <input type="range" id="speedControl" min="1" max="10" value="5"></label>
+                        <label>Type: 
+                            <select id="animationType">
+                                <option value="bounce">Bounce</option>
+                                <option value="slide">Slide</option>
+                                <option value="rotate">Rotate</option>
+                                <option value="pulse">Pulse</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Card Flip -->
+                <div class="demo-card">
+                    <h3>Card Flip</h3>
+                    <div class="flip-container">
+                        <div class="flip-card" id="flipCard">
+                            <div class="flip-card-front">
+                                <h4>Front</h4>
+                                <p>Click to flip!</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Back</h4>
+                                <p>JavaScript powered!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="flipCard()">Flip Card</button>
+                </div>
+
+                <!-- Modal Popup -->
+                <div class="demo-card">
+                    <h3>Modal Popup</h3>
+                    <button onclick="openModal()">Open Modal</button>
+                    <div class="modal" id="demoModal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <h3>Animated Modal</h3>
+                            <p>This modal uses CSS animations triggered by JavaScript!</p>
+                            <button onclick="closeModal()">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Loader -->
+                <div class="demo-card">
+                    <h3>Progress Loader</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <div class="button-group">
+                        <button onclick="startLoader()">Start Loader</button>
+                        <button onclick="resetLoader()">Reset Loader</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
